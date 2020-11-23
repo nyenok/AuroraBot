@@ -1,4 +1,4 @@
-# ProjectAlf UserBot
+# Aurora Userbot
 
 <p align="center">
     <a href="https://github.com/alfianandaa/ProjectAlf/actions?query=workflow%3AFailCheck" > <img src="https://img.shields.io/github/workflow/status/alfianandaa/ProjectAlf/FailCheck/master?style=for-the-badge&logo=github-actions&logoColor=green" alt="Failcheck" /></a>

@@ -212,7 +212,7 @@ async def upstream(event):
 
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`ProjectAlf is`  **up-to-date**  `on`  " f"**{UPSTREAM_REPO_BRANCH}**\n"
+            "\n**AuroraBot  up-to-date with:**\n" f"**{UPSTREAM_REPO_BRANCH}**\n"
         )
         await asyncio.sleep(15)
         await event.delete()
@@ -227,7 +227,7 @@ async def upstream(event):
             "`Force-Syncing to latest stable userbot code, please wait...`"
         )
     if conf == "now":
-        await event.edit("`Updating ProjectAlf, please wait....`")
+        await event.edit("`Updating , please wait....`")
         await update(event, repo, ups_rem, ac_br)
         await asyncio.sleep(15)
         await event.delete()
