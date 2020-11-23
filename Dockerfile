@@ -24,13 +24,8 @@ RUN apt -qq install -y --no-install-recommends \
 RUN mkdir -p /tmp/ && \
     cd /tmp/ && \
     wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip  && \
-    unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/ && \
-    # clean up the container "layer", after we are done
-    rm /tmp/chromedriver.zip.
- 
-ENV GOOGLE_CHROME_DRIVER /usr/bin/chromedriver
-ENV GOOGLE_CHROME_BIN /usr/bin/google-chrome-stable
-    
+    unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/
+         
 # install pre requirements
 COPY requirements.txt .
 RUN pip install -r requirements.txt
