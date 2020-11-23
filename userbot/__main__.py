@@ -29,7 +29,7 @@ for module_name in ALL_MODULES:
     imported_module = import_module("userbot.modules." + module_name)
 
 
-LOGS.info("You are running ProjectAlf [v2]")
+LOGS.info("You are running AuroraBot [v0.1]")
 
 LOGS.info("AuroraBot is now running !!!"
           "Test it by typing .alive or .ping in any chat.")
