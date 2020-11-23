@@ -1,0 +1,1 @@
+. resources/aria.sh; python -m userbot
