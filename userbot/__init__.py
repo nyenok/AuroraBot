@@ -313,7 +313,7 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    "ProjectAlf",
+                    "AuroraBot",
                     text="""You can convert your account to bot and use them. Remember, you can't manage someone else's bot! All installation details are explained from GitHub address below.""",
                     buttons=[
                         [
