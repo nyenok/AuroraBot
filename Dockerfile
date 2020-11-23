@@ -1,9 +1,6 @@
 # We're using python Base Image
 FROM python:3.9
 
-# Set working Directory
-WORKDIR /userbot/
-
 # Prepair Enviroment
 RUN apt -qq update
 RUN apt -qq install -y --no-install-recommends \
@@ -27,11 +24,14 @@ RUN mkdir -p /tmp/ && \
     unzip /tmp/chromedriver.zip chromedriver -d /usr/bin/
          
 # install pre requirements
-COPY requirements.txt .
+RUN git clone -b master https://github.com/TomyPrs/AuroraBot /home/Aurora/
+RUN mkdir /home/Aurora/bin/
+WORKDIR /home/Aurora/
+
 RUN pip install -r requirements.txt
 
 # copy the content of the local src directory to the working directory
-COPY . .
+#COPY . . 
 
 # Setting up aria2c
 RUN chmod +x resources/aria.sh
